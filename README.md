@@ -1,3 +1,3 @@
-# basicjs!
+# 100 Days of HTML CSS & JAVASCRIPT
 
-Colaboración para el badge de GitHub
+no olviden Colaborar para el badge de GitHub!
