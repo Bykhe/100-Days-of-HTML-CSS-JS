@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/quizGame/layout.css">
+</head>
+<body>
+    <main class="container">
+
+        <div class="quiz active" id="start-screen">
+            <h1>Quiz Time!</h1>
+            <p>Test your knowledge with these fun questions</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div class="quiz" id="quiz-screen">
+            <div class="quiz__header">
+                <h2 class="quiz__question" id="quiz-question-text" aria-live="polite"></h2>
+                <div class="quiz__info">
+                    <p>
+                        Question: <span id="current-question">1</span> of <span>5</span>
+                    </p>
+                    <p>
+                        Score: <span id="score">0</span>
+                    </p>
+                </div>
+            </div>
+            <div class="answers__container" id="answers-continer">
+                <!-- Answer buttons will be inserted -->
+            </div>
+            <div class="quiz__progres-bar" >
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <div class="quiz active" id="result-screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <div id="result-message">
+                    <p>Good job!</p>
+                </div>
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+
+    </main>
+</body>
+</html>
