@@ -1,0 +1,158 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    background-color: #0c1421;
+}
+
+.quiz {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    transition: padding .3s ease;
+}
+
+.quiz.active {
+    display: block;
+}
+
+/* START SCREEN */
+
+#start-screen h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #40b3ff;
+    transition: font-size .3s ease;
+}
+
+#start-screen p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #abb4c7;
+}
+
+.quiz__header {
+    margin-bottom: 2rem;
+}
+
+#quiz-question-text {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: font-size .3s ease;
+}
+
+.quiz__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #abb4c7;
+}
+
+.answers__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer__bnt {
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #1e293b;
+    color: #ffffff;
+    border: 2px solid #111d2e;
+    transition: all .3s ease;
+}
+
+.answer__btn:hover {
+    background-color: #111d2e;
+    border-color: #1e293b;
+}
+
+.answer__btn.correct {
+    background-color: #e6fff0;
+    border-color: #a3f0c4;
+    color: #28a745;
+}
+
+.answer__btn.incorrect {
+    background-color: #fff0f0;
+    border-color: #ffbdbd;
+    color: #dc3545;
+}
+
+.quiz__progres-bar {
+    height: 10px;
+    margin-top: 20px;
+    background-color: #1e293b;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #40b3ff;
+    transition: width .3s ease;
+}
+
+/* RESULT SCREEN */
+
+#result-screen {
+    color: #40b3ff;
+}
+
+.result-info {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #1e293b;
+}
+
+.result-info p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #abb4c7;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0099ff;
+}
+
+/* RESPONSIVE DESING */
+
+@media (max-width:500px) {
+    /* when we hit 500px and below, implemet the styles below */
+
+    .quiz {
+        padding: 1rem;
+    }
+
+    #start-screen h1 {
+        font-size: 2rem;
+    }
+
+    #quiz-question-text {
+        font-size: 1.3rem;
+    }
+
+    .answer__bnt {
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
