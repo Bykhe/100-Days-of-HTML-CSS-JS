@@ -19,6 +19,12 @@ const MAX_SCORE = document.getElementById('max-score');
 const RESULT_MESSAGE = document.getElementById('result-message');
 const RESTART_BTN = document.getElementById('restart-btn');
 
+const audio = [
+    new Audio('./src/assets/audio/el-acabado.mp3'),
+    new Audio('./src/assets/audio/el-que-lo-critica.mp3'),
+    new Audio('./src/assets/audio/boeee.mp3'),
+];
+
 // Quiz questions - Preguntas del quiz
 const quizQuestions = [
     {
@@ -108,11 +114,13 @@ function selectAnswer(event) {
     answersStatus = true;
     
     if(selectedBtn === currentQuestion.answer) {
+        audio[1].play();
         answerBtn.classList.add('correct');
         console.log("correcto");
         SCORE.textContent = score += 1;
         currentQuestionIndex++
     } else {
+        audio[0].play();
         answerBtn.classList.add('incorrect');
         console.log("incorrecto");
         currentQuestionIndex++;
@@ -138,6 +146,7 @@ function selectAnswer(event) {
 
 
 function showVictory() {
+    audio[2].play();
     QUIZ_SCREEN.classList.remove('active');
     RESULT_SCREEN.classList.add('active');
     FINAL_SCORE.textContent = score;
